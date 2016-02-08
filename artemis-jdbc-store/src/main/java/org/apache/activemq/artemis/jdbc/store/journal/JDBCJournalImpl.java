@@ -95,6 +95,7 @@ public class JDBCJournalImpl implements Journal {
       this.jdbcUrl = jdbcUrl;
       this.jdbcDriverClass = jdbcDriverClass;
       timerThread = "Timer JDBC Journal(" + tableName + ")";
+      syncTimer = new Timer();
 
       records = new ArrayList<>();
    }
